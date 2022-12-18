@@ -25,7 +25,7 @@ char *ft_strchr(const char *s, int c)
             return (NULL);
         j++;
     }
-    return (&((char *)s)[j]);
+    return ((char *)&s[j]);
 }
 
 char *add(char *s1, char *s2)
@@ -36,7 +36,7 @@ char *add(char *s1, char *s2)
 
     if (!s1)
     {
-        s1 = (char *)malloc(1);
+        s1 = (char *)malloc(1 * sizeof(char));
         s1[0] = '\0';
     }
     if (!s2)

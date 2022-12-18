@@ -19,7 +19,7 @@ char *scan(int fd, char *s)
             free(a);
             return (NULL);
         }
-        a[lw] = 0;
+        a[lw] = '\0';
         s = add(s, a);
         if (!s)
             return (NULL);
