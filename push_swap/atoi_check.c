@@ -24,7 +24,9 @@ void	atoi_check(char **a)
 		if (n < -2147483648 || n > 2147483647)
 		{
 			write (2, "Error\n", 6);
+			free(a[0]);
 			free(a);
+			system("leaks push_swap");
 			exit (0);
 		}
 		i++;
